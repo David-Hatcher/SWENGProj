@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/SWENGProj/static/css/main.0ac81761.chunk.css",
+    "main.js": "/SWENGProj/static/js/main.54de240a.chunk.js",
+    "main.js.map": "/SWENGProj/static/js/main.54de240a.chunk.js.map",
+    "runtime-main.js": "/SWENGProj/static/js/runtime-main.a4d78625.js",
+    "runtime-main.js.map": "/SWENGProj/static/js/runtime-main.a4d78625.js.map",
+    "static/css/2.e0c8fd60.chunk.css": "/SWENGProj/static/css/2.e0c8fd60.chunk.css",
+    "static/js/2.f8fb72dc.chunk.js": "/SWENGProj/static/js/2.f8fb72dc.chunk.js",
+    "static/js/2.f8fb72dc.chunk.js.map": "/SWENGProj/static/js/2.f8fb72dc.chunk.js.map",
+    "static/js/3.56350dbc.chunk.js": "/SWENGProj/static/js/3.56350dbc.chunk.js",
+    "static/js/3.56350dbc.chunk.js.map": "/SWENGProj/static/js/3.56350dbc.chunk.js.map",
+    "index.html": "/SWENGProj/index.html",
+    "static/css/2.e0c8fd60.chunk.css.map": "/SWENGProj/static/css/2.e0c8fd60.chunk.css.map",
+    "static/css/main.0ac81761.chunk.css.map": "/SWENGProj/static/css/main.0ac81761.chunk.css.map",
+    "static/js/2.f8fb72dc.chunk.js.LICENSE.txt": "/SWENGProj/static/js/2.f8fb72dc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a4d78625.js",
+    "static/css/2.e0c8fd60.chunk.css",
+    "static/js/2.f8fb72dc.chunk.js",
+    "static/css/main.0ac81761.chunk.css",
+    "static/js/main.54de240a.chunk.js"
+  ]
+}
