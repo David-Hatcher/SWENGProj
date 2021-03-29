@@ -14,14 +14,14 @@ export default function Search(props) {
     }
   }
   const updateFilterResults = (newData) => {
-
+    setData(newData);
   }
   const resetFilterResults = () => {
-
+    setData(props.data);
   }
   return (
     <div className='grid grid-cols-12 mx-3 min-h-90 relative'>
-      <Filter data={props.data}/>
+      <Filter data={props.data} reset={resetFilterResults} update={updateFilterResults}/>
       <PostList data={data} changeDisplayPost={changeDisplayPost}/>
       <Post postData={postData}/>
     </div>

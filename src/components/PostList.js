@@ -11,7 +11,7 @@ export default function PostList(props) {
     }
   }
   return (
-    <div className='col-span-2 grid-rows-8 bg-white border border-gray-400 rounded shadow-xl mx-2'>
+    <div className='col-span-2 grid-rows-8 bg-gray-600 border border-gray-400 rounded shadow-xl mx-2'>
       {Object.keys(props.data).map((key) => 
         <PostListItem 
           data={props.data[key]}

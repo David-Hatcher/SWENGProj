@@ -40,3 +40,7 @@ code {
 	--tw-bg-opacity: 1;
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
+
+.DayPickerInput input{
+  border-radius: 0.25rem;
+}

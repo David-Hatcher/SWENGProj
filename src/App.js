@@ -21,7 +21,7 @@ function App() {
         <Header showSearch={showSearch} showCreate={showCreate} showHomepage={showHomepage}/>
       </div>
       <div className="h-9-10">
-        <Body content={content}/>
+        <Body content={content} goToSearch={showSearch}/>
       </div>
     </div>
   );
