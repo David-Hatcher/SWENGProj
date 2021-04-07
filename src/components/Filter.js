@@ -38,16 +38,27 @@ export default function Filter(props) {
   }
   const generateCategories = (catList) => {
     catList.unshift("All");
-    return  <div className="my-1"><label>Category:
-              <select className='text-black' onChange={updateCategory}>
-                {catList.map(generateOption)}
-              </select>
+    return  <div className="my-2"><label>
+              <div className="grid grid-cols-2">
+                <div>
+                  Category:
+                </div>
+                <div>
+                  <select className='text-black' onChange={updateCategory}>
+                    {catList.map(generateOption)}
+                  </select>
+                </div>
+              </div>
+      
+      
+      
+
             </label></div>;
   }
   const generateKeyword = () => {
-  return  <div className="my-1"><label>Keyword:
+  return  <div className="my-1 text-center"><label>Keyword Search:<br></br>
             <input
-              className="bg-white text-gray-800 font-semibold border border-gray-400 rounded shadow-xl"
+              className="bg-white text-gray-800 font-semibold border border-gray-400 rounded shadow-xl flex-grow"
               name='keyword'
               type='text'
               placeholder="Type Keywords..."
@@ -56,28 +67,48 @@ export default function Filter(props) {
   }
   const generateCities = (cityList) => {
     cityList.unshift("All");
-    return  <div className="my-1"><label>City:
-              <select className='text-black' onChange={updateCity}>
-                {cityList.map(generateOption)}
-              </select>
+    return  <div className="my-2"><label>
+              <div className="grid grid-cols-2">
+                <div>
+                  City:
+                </div>
+                <div>
+                  <select className='text-black' onChange={updateCity}>
+                    {cityList.map(generateOption)}
+                  </select>
+                </div>
+              </div>
+      
+      
+
             </label></div>;
   }
   const generateStartDate = () => {
-    return  <div className="my-1"><label>Start Date:
+    return  <div className="my-1"><label>Start Date:<br></br>
               <ReactDayPicker key={"start"} onChange={updateStartDate}/>
             </label></div>
   }
   const generateEndDate = () => {
-    return  <div className="my-1"><label>End Date:
+    return  <div className="my-1"><label>End Date:<br></br>
               <ReactDayPicker key={"end"} onChange={updateEndDate}/>
             </label></div>
   }
   const generateZips = (zipList) => {
     zipList.unshift("All")
-    return  <div className="my-1"><label>Zipcode:
-              <select className='text-black' onChange={updateZip}>
-                {zipList.map(generateOption)}
-              </select>
+    return  <div className="my-1"><label>
+              <div className="grid grid-cols-2">
+                <div>
+                  Zipcode:
+                </div>
+                <div>
+                  <select className='text-black' onChange={updateZip}>
+                    {zipList.map(generateOption)}
+                  </select>
+                </div>
+              </div>
+      
+      
+              
             </label>
             </div>
   }
@@ -92,11 +123,9 @@ export default function Filter(props) {
   }  
   const updateEndDate = (date) => {
     setEndDate(date.getTime()/1000);
-
   }
   const updateCity = (event) => {
     setCity(event.target.value);
-
   }
   const updateCategory = (event) => {
     setCategory(event.target.value);
@@ -183,7 +212,7 @@ export default function Filter(props) {
     return false;
   }
   return (
-    <div className="col-span-2 bg-gray-600 text-gray-200 font-semibold border border-gray-400 rounded shadow-xl mx-3 align-baseline flex items-center">
+    <div className="col-span-2 bg-gray-600 text-gray-200 font-semibold border border-gray-400 rounded shadow-xl mx-3 align-baseline h-2/5">
       <form id="filter" className='my-2 grid-rows-8 text-center'>
         {generateKeyword()}
         {generateCategories(filterList.category)}

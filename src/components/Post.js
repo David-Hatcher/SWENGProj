@@ -9,12 +9,17 @@ export default function Post(props) {
     </div>
   }else{
     element = 
-    <div className='col-span-8 bg-white text-gray-800 font-semibold border border-gray-400 rounded shadow-xl'>
-      <div>{props.postData.title}</div>
+    <div className='inline-block col-span-8 bg-white text-gray-800 font-semibold border border-gray-400 rounded shadow-xl mx-2 relative'>
+      <div className="text-4xl my-2">{props.postData.title}</div>
       <img
-        className="w-3/6 myl-25"
+        className="w-3/6 myl-25 rounded max-h-80 object-contain"
         src={props.postData.image}/>
-      <p>{props.postData.description}</p>
+      <p>Category: {props.postData.category}</p>
+      <p className="mt-10 m-auto max-w-max">{props.postData.description}</p>
+      <div className="align-baseline text-left mx-1"
+          style={{position:'absolute',bottom:0}}>
+        <p>{new Date(props.postData.postdate * 1000).toDateString()}</p>
+      </div>      
     </div>
   }
   return (
