@@ -16,7 +16,7 @@ export default function Post(props) {
         src={props.postData.image}/>
       <p>Category: {props.postData.category}</p>
       <p className="mt-10 m-auto max-w-max">{props.postData.description}</p>
-      <div className="align-baseline text-left mx-1"
+      <div className="align-baseline mx-1"
           style={{position:'absolute',bottom:0}}>
         <p>{new Date(props.postData.postdate * 1000).toDateString()}</p>
       </div>      
