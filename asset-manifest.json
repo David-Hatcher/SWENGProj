@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/SWENGProj/static/css/main.67b7f72e.chunk.css",
-    "main.js": "/SWENGProj/static/js/main.30cf1186.chunk.js",
-    "main.js.map": "/SWENGProj/static/js/main.30cf1186.chunk.js.map",
-    "runtime-main.js": "/SWENGProj/static/js/runtime-main.a4d78625.js",
-    "runtime-main.js.map": "/SWENGProj/static/js/runtime-main.a4d78625.js.map",
+    "main.css": "/SWENGProj/static/css/main.ff92acef.chunk.css",
+    "main.js": "/SWENGProj/static/js/main.22bd85a4.chunk.js",
+    "main.js.map": "/SWENGProj/static/js/main.22bd85a4.chunk.js.map",
+    "runtime-main.js": "/SWENGProj/static/js/runtime-main.c74da6f1.js",
+    "runtime-main.js.map": "/SWENGProj/static/js/runtime-main.c74da6f1.js.map",
     "static/css/2.e0c8fd60.chunk.css": "/SWENGProj/static/css/2.e0c8fd60.chunk.css",
-    "static/js/2.f8fb72dc.chunk.js": "/SWENGProj/static/js/2.f8fb72dc.chunk.js",
-    "static/js/2.f8fb72dc.chunk.js.map": "/SWENGProj/static/js/2.f8fb72dc.chunk.js.map",
-    "static/js/3.56350dbc.chunk.js": "/SWENGProj/static/js/3.56350dbc.chunk.js",
-    "static/js/3.56350dbc.chunk.js.map": "/SWENGProj/static/js/3.56350dbc.chunk.js.map",
+    "static/js/2.b27533c6.chunk.js": "/SWENGProj/static/js/2.b27533c6.chunk.js",
+    "static/js/2.b27533c6.chunk.js.map": "/SWENGProj/static/js/2.b27533c6.chunk.js.map",
+    "static/js/3.28e3d060.chunk.js": "/SWENGProj/static/js/3.28e3d060.chunk.js",
+    "static/js/3.28e3d060.chunk.js.map": "/SWENGProj/static/js/3.28e3d060.chunk.js.map",
     "index.html": "/SWENGProj/index.html",
     "static/css/2.e0c8fd60.chunk.css.map": "/SWENGProj/static/css/2.e0c8fd60.chunk.css.map",
-    "static/css/main.67b7f72e.chunk.css.map": "/SWENGProj/static/css/main.67b7f72e.chunk.css.map",
-    "static/js/2.f8fb72dc.chunk.js.LICENSE.txt": "/SWENGProj/static/js/2.f8fb72dc.chunk.js.LICENSE.txt"
+    "static/css/main.ff92acef.chunk.css.map": "/SWENGProj/static/css/main.ff92acef.chunk.css.map",
+    "static/js/2.b27533c6.chunk.js.LICENSE.txt": "/SWENGProj/static/js/2.b27533c6.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/SWENGProj/static/media/logo.e060f5cf.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.a4d78625.js",
+    "static/js/runtime-main.c74da6f1.js",
     "static/css/2.e0c8fd60.chunk.css",
-    "static/js/2.f8fb72dc.chunk.js",
-    "static/css/main.67b7f72e.chunk.css",
-    "static/js/main.30cf1186.chunk.js"
+    "static/js/2.b27533c6.chunk.js",
+    "static/css/main.ff92acef.chunk.css",
+    "static/js/main.22bd85a4.chunk.js"
   ]
 }
