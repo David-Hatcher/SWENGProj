@@ -11,5 +11,5 @@ export default function ReactDayPicker(props) {
     console.log(date.getTime()/1000);
   }
 
-  return <DayPickerInput onDayChange={onChange} />;
+  return <DayPickerInput inputProps={{readOnly:true}} onDayChange={onChange} />;
 }

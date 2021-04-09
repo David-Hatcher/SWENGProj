@@ -212,9 +212,11 @@ export default function Filter(props) {
   }
 
   const resetFilters = () => {
-    props.reset();
     document.getElementById('filter').reset();
     setDayKey(dayKey + 1);
+    setStartDate(null);
+    setEndDate(null);
+    setTimeout(() => { props.reset(); },250)
   }
 
   return (
