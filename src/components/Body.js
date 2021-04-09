@@ -19,7 +19,6 @@ export default function Body(props) {
     })
     return maxId;
   }
-  console.log(getMaxId(data));
   if(props.content == 'Search'){
     element = <Search data={data}/>
   }else if(props.content == 'Create'){

@@ -54,7 +54,7 @@ export default function CreateForm(props) {
     postData.startDate = startDate;
     postData.endDate = endDate
     postData.city = city;
-    postData.postdate = new Date().getTime() / 1000;
+    postData.postdate = parseInt(new Date().getTime() / 1000);
   }
   const handleClick = (event) => {
     props.submit()

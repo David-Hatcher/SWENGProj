@@ -9,6 +9,7 @@ export default function Filter(props) {
   const [city,setCity] = useState("All");
   const [startDate,setStartDate] = useState(null);
   const [endDate,setEndDate] = useState(null);
+  const [dayKey,setDayKey] = useState(1);
   useEffect(() => {
     filterData(data);
   },[keyword,zip,category,city,startDate,endDate]);//Only filter data on changes to the states
@@ -85,12 +86,12 @@ export default function Filter(props) {
   }
   const generateStartDate = () => {
     return  <div className="my-1"><label>Start Date:<br></br>
-              <ReactDayPicker key={"start"} onChange={updateStartDate}/>
+              <ReactDayPicker key={`start-${dayKey}`} onChange={updateStartDate}/>
             </label></div>
   }
   const generateEndDate = () => {
     return  <div className="my-1"><label>End Date:<br></br>
-              <ReactDayPicker key={"end"} onChange={updateEndDate}/>
+              <ReactDayPicker key={`end-${dayKey}`} onChange={updateEndDate}/>
             </label></div>
   }
   const generateZips = (zipList) => {
@@ -132,8 +133,6 @@ export default function Filter(props) {
   }
 
   const filterData = (data) => {
-    console.log("kw = " + keyword)
-    console.log("City = " + city)
     let newData = {};
     Object.keys(data).map((key) => {
       if(isItemInFilter(data[key])){
@@ -211,8 +210,15 @@ export default function Filter(props) {
     }
     return false;
   }
+
+  const resetFilters = () => {
+    props.reset();
+    document.getElementById('filter').reset();
+    setDayKey(dayKey + 1);
+  }
+
   return (
-    <div className="col-span-2 bg-gray-600 text-gray-200 font-semibold border border-gray-400 rounded shadow-xl mx-3 align-baseline h-2/5">
+    <div className="bg-gray-600 text-gray-200 font-semibold border border-gray-400 rounded shadow-xl mx-3 align-baseline">
       <form id="filter" className='my-2 grid-rows-8 text-center'>
         {generateKeyword()}
         {generateCategories(filterList.category)}
@@ -221,6 +227,7 @@ export default function Filter(props) {
         {generateStartDate()}
         {generateEndDate()}
       </form>
+      <button onClick={resetFilters} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow my-5">Reset Filter</button>
     </div>
   )
 }

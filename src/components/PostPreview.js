@@ -9,7 +9,8 @@ export default function Post(props) {
     </div>
   }else{
     element = 
-    <div className='h-9-10 bg-white text-gray-800 font-semibold border border-gray-400 rounded shadow-xl'>
+    <div className='h-full bg-white text-gray-800 font-semibold border border-gray-400 rounded shadow-xl'>
+        <p className="h-1-10 text-black font-bold">POST PREVIEW</p>
       <div>{props.postData.title}</div>
       <img
         className="w-3/6 myl-25"
