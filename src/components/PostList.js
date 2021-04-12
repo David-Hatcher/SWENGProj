@@ -3,6 +3,8 @@ import PostListItem from './PostListItem';
 
 export default function PostList(props) {
   const [chosen,setChosen] = useState();
+  
+  //This function is used to highlight the current post
   const handleClick = (key) => {
     if(key == chosen){
       setChosen("");

@@ -7,6 +7,10 @@ import PostList from './PostList'
 export default function Search(props) {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [postData, setPostData] = useState({});
+  const [data, setData] = useState(props.data);
+
+  //Function used to fetch information from the API to get a list of all the posts
   useEffect(() => {
     var raw = "";
     var requestOptions = {
@@ -18,8 +22,8 @@ export default function Search(props) {
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
   }, [])
-  const [postData, setPostData] = useState({});
-  const [data, setData] = useState(props.data);
+
+  //Handles changing the currently displayed post
   const changeDisplayPost = (postNum) => {
     if(postData == props.data[postNum]){
       setPostData({});
@@ -27,12 +31,17 @@ export default function Search(props) {
       setPostData(props.data[postNum]);
     }
   }
+
+  //Update the posts currently being shown in the post list
   const updateFilterResults = (newData) => {
     setData(newData);
   }
+
+  //Reset the values currently being shown in the post list to the full set of data
   const resetFilterResults = () => {
     setData(props.data);
   }
+  
   return (
     <div className='grid grid-cols-12 mx-3 min-h-90 relative'>
       <div className="grid grid-rows-2 col-span-2">

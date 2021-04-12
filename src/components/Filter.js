@@ -33,10 +33,15 @@ export default function Filter(props) {
       filterList[key] = [value];
     }
   }
+
   buildFilters(props.data);
+
+  //Function used to generate options on a map call.
   const generateOption = (data) => {
     return <option>{data}</option>;
   }
+
+  //START: Functions used to build the different DOM elements of the filter
   const generateCategories = (catList) => {
     catList.unshift("All");
     return  <div className="my-2"><label>
@@ -113,6 +118,9 @@ export default function Filter(props) {
             </label>
             </div>
   }
+  //END: Generate dom elements
+
+  //START: Update state functions
   const updateKeyword = (event) =>{
     setKeyword(event.target.value);
   }
@@ -131,7 +139,9 @@ export default function Filter(props) {
   const updateCategory = (event) => {
     setCategory(event.target.value);
   }
+  //END: Update state functions
 
+  //Filter the input based on current search filter options, then update the current data being shown in the search
   const filterData = (data) => {
     let newData = {};
     Object.keys(data).map((key) => {
@@ -142,6 +152,7 @@ export default function Filter(props) {
     props.update(newData);
   }
 
+  //Check if a single item matches the current filter values, returns boolean
   const isItemInFilter = (data) => {
     let kwPresent = true;
     let cityPresent = true;
@@ -170,20 +181,20 @@ export default function Filter(props) {
     }
     return kwPresent && cityPresent && zipPresent && categoryPresent && afterStartDate && beforeEndDate;
   }
+
+  //START: Helper functions used to determine if filter cases match a specific field on a object
   const testKeyword = (keyword,dataTitle,dataDescription) => {
     if(dataTitle.includes(keyword) || dataDescription.includes(keyword)){
       return true;
     }
     return false;
   }
-
   const testStartDate = (currentDate) => {
     if(currentDate >= startDate){
       return true;
     }
     return false;
   }
-
   const testEndDate = (currentDate) => {
     if(currentDate <= endDate){
       return true;
@@ -196,21 +207,21 @@ export default function Filter(props) {
     }
     return false;
   }
-
   const testZip = (currentZip) => {
     if(currentZip == zip){
       return true;
     }
     return false;
   }
-
   const testCategory = (currentCategory) => {
     if (currentCategory.toLowerCase() == category.toLowerCase()){
       return true;
     }
     return false;
   }
+  //END: Helper functions
 
+  //Reset the filter
   const resetFilters = () => {
     document.getElementById('filter').reset();
     setDayKey(dayKey + 1);

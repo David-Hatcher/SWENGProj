@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function Post(props) {
   let element = "";
+  //Handles post preview for the create post page
   if(JSON.stringify(props.postData) == JSON.stringify({})){
     element =     
     <div className='col-span-8 bg-white text-gray-800 font-semibold border border-gray-400 rounded shadow-xl'>

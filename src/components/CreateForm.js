@@ -11,10 +11,15 @@ export default function CreateForm(props) {
   const [endDate,setEndDate] = useState("");
   const [city,setCity] = useState("");
   let postData = {};
+
+  //useEffect will trigger when one of the states are updated to update the preview
   useEffect(() => {
     populatePost();
     props.update(postData);
   },[title,image,category,zip,description,startDate,endDate,city])
+  
+  //Functions used to update the state for each of the fields
+  
   const updateZip = (event) => {
     setZip(event.target.value);
   }
@@ -23,28 +28,25 @@ export default function CreateForm(props) {
   }  
   const updateEndDate = (date) => {
     setEndDate(date.getTime()/1000);
-
   }
   const updateCity = (event) => {
     setCity(event.target.value);
-
   }
   const updateCategory = (event) => {
     setCategory(event.target.value);
   }
-
   const updateDescription = (event) => {
     setDescription(event.target.value);
   }
-
   const updateTitle = (event) => {
     setTitle(event.target.value);
   }
-
   const updateImage = (event) => {
     setImage(event.target.value);
   }
+  //End update state functions
 
+  //Update the postData json to be passed to the preview and the AddPost functionality
   const populatePost = () => {
     postData.title = title;
     postData.image = image;
@@ -56,6 +58,7 @@ export default function CreateForm(props) {
     postData.city = city;
     postData.postdate = parseInt(new Date().getTime() / 1000);
   }
+  //sumbit button handler
   const handleClick = (event) => {
     props.submit()
   }

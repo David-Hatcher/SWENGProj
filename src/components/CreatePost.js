@@ -16,15 +16,19 @@ export default function CreatePost(props) {
     "description" : ""
   });
 
+  //update the post state to be passed to the preview and submit
   const updatePreview = (post) => {
     setPost(post);
   }
+  
+  //handle the submit click
   const submit = () => {
     if(validateInput()){
       props.add(post);
     }
   }
 
+  //check that input is properly formatted
   const validateInput = () => {
     let alertString = "";
     if(post.title === ""){

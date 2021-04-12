@@ -6,10 +6,13 @@ import Search from './Search';
 export default function Body(props) {
   let data = require('../data/posts.json');
   let element = "";
+
+  //Add an item to the post to the list
   const addItem = (item) => {
     data[getMaxId(data) + 1] = item;
     props.goToSearch();
   }
+  //find max idea of the current items in the post
   const getMaxId = (data) => {
     let maxId = 0;
     Object.keys(data).map((key) => {

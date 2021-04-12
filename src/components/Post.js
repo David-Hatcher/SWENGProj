@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Post(props) {
   let element = "";
+
+  //Check if the passed post is empty, if not then show it on the post component
   if(JSON.stringify(props.postData) == JSON.stringify({})){
     element =     
     <div className='col-span-8 bg-white text-gray-800 font-semibold border border-gray-400 rounded shadow-xl'>

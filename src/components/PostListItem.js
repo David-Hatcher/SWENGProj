@@ -1,6 +1,8 @@
 import React from 'react'
 
 export default function PostListItem(props) {
+
+  //Handles the user interaction with a specific post
   const handleClick = () => {
     props.changeDisplayPost(props.listNum);
     props.onClick(props.listNum)
