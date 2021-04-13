@@ -10,6 +10,7 @@ export default function CreateForm(props) {
   const [startDate,setStartDate] = useState("");
   const [endDate,setEndDate] = useState("");
   const [city,setCity] = useState("");
+
   let postData = {};
 
   //useEffect will trigger when one of the states are updated to update the preview
@@ -53,8 +54,8 @@ export default function CreateForm(props) {
     postData.category = category;
     postData.zip = zip;
     postData.description = description;
-    postData.startDate = startDate;
-    postData.endDate = endDate
+    postData.startdate = startDate;
+    postData.enddate = endDate
     postData.city = city;
     postData.postdate = parseInt(new Date().getTime() / 1000);
   }

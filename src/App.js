@@ -9,7 +9,6 @@ function App() {
   const [content, setContent] = useState("Homepage");
   // const partParams = require('./data/particlesjs-config.json');
   const partParams = require('./data/parts.json');
-  console.log(partParams);
   const showSearch = () => {
     setContent("Search");
   }
