@@ -10,20 +10,26 @@ export default function Filter(props) {
   const [startDate,setStartDate] = useState(null);
   const [endDate,setEndDate] = useState(null);
   const [dayKey,setDayKey] = useState(1);
+
   useEffect(() => {
     filterData(data);
   },[keyword,zip,category,city,startDate,endDate]);//Only filter data on changes to the states
+  
   let filterList = {};
+
+  //These functions are used to populate the fields for the drop down inputs
   const buildFilters = (data) => {
     Object.keys(data).map((key) => {
       addCurrentItems(data[key]);
     })
   }
+
   const addCurrentItems = (cur) => {
     Object.keys(cur).map((key) => {
       addOnePair(key,cur[key]);
     })
   }
+  
   const addOnePair = (key,value) => {
     if(filterList.hasOwnProperty(key)){
       if(!filterList[key].includes(value)){
@@ -34,6 +40,7 @@ export default function Filter(props) {
     }
   }
 
+  //parse the data and determine what items need to go in the drop down menus
   buildFilters(props.data);
 
   //Function used to generate options on a map call.
@@ -84,9 +91,6 @@ export default function Filter(props) {
                   </select>
                 </div>
               </div>
-      
-      
-
             </label></div>;
   }
   const generateStartDate = () => {
